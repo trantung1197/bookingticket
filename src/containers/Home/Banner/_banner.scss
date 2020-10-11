@@ -1,0 +1,114 @@
+
+.appBanner {
+  background-image: url("./backapp.jpg");
+
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  .banner-container {
+    .appBanner__content {
+      max-width: 990px;
+      align-items: center;
+      justify-content: space-around;
+      display: flex;
+      .content__note {
+      padding:0 30px;
+        text-align: left;
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        p {
+          margin: 20px auto;
+        }
+      }
+
+      .content__demo {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 5px 150px 0;
+        align-items: center;
+        img.img-fluid {
+          position: absolute;
+          z-index: 998;
+          width: 225px;
+        }
+
+        .swiper-container-moblie {
+          width: 200px !important;
+          height: auto;
+          color: $color-dark;
+          position: relative;
+          overflow: hidden;
+
+          .swiper-wrapper {
+            height: 100%;
+            position: relative;
+
+            .swiper-slide {
+              // width: 200px!important;
+              height: 80% !important;
+              text-align: center;
+              font-size: 18px;
+              // background: #fff;
+              /* Center slide text vertically */
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              flex-direction: row !important;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              -webkit-justify-content: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              -webkit-align-items: center;
+              align-items: center;
+
+              padding: 2% 0;
+
+              img.demo-img {
+                border-radius: 40px !important;
+                width: 98% !important;
+                height: 95%;
+                background-color: $color-gray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .appBanner {
+    height: 730px;
+    .banner-container {
+      .appBanner__content {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .appBanner {
+    height: 600px;
+    .banner-container {
+      .appBanner__content {
+        .content__demo {
+          display: none;
+        }
+      }
+    }
+  }
+}

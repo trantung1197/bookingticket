@@ -1,0 +1,22 @@
+// color
+$color-dark: #222;
+$color-dark-0: #393e46;
+$color-green:#04b962;
+$color-white: #fff;
+$color-orange:#e84118;
+$color-yellow:#fbc531;
+$color-gray:#949494;
+$color-blue:#60C5EF;
+
+//font-size
+
+//Link phim
+$link-1:'https://s3img.vcdn.vn/123phim/2020/03/onward-15840276765820.jpg';
+
+@mixin colorOfArrowBtn($color) {
+    color: $color;
+    transition: all 0.2s linear;
+    &:hover {
+      opacity: 0.5;
+    }
+}

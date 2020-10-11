@@ -1,0 +1,10 @@
+@import "./variables";
+
+@import '../components/Footer/footer';
+@import "../containers/Home/Banner/banner";
+@import "../containers/Home/ChonGhe/chonghe";
+@import "../containers/Home/DangChieu/dangChieu";
+@import "../containers/Admin/Auth/assets/scss/login";
+@import "../containers/Admin/Auth/assets/scss/sign-up";
+@import "../containers/Home/DetailMovie/LichChieuTheoPhim/lichchieudetail";
+@import '../components/LichChieuTheoRap/scss/lichchieu';

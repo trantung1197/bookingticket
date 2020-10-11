@@ -1,0 +1,249 @@
+@import "../../../../scss/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.detail-movie__showLichChieu {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fafafa;
+  height: 700px;
+  max-width: 1440px;
+  width: 80%;
+  border: 1px solid $color-gray;
+  margin: 20px auto !important ;
+  z-index: 998;
+  .detail-movie__showHeThong {
+    height: 100%;
+    border-right: 1px solid $color-gray;
+    ul.detail-movie__dsHeThong {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      li {
+        list-style: none;
+        border-bottom: 1px solid $color-gray;
+        width: 80%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 10px;
+        height: 80px;
+        // opacity: 0.5;
+        transition: all 0.3s linear;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 700;
+          margin-left: 15px;
+        }
+        &:hover {
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .detail-movie__showSuatChieu {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    ul.detail-movie__dsDate {
+      width: 100%;
+      display: flex;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      margin: 0;
+      align-items: center;
+      transition: all 0.3s linear;
+      padding: 10px 0;
+      li {
+        padding: 5px 10px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 700;
+        color: $color-gray;
+        transition: all 0.3s linear;
+        border-right: 1px solid $color-gray;
+        span {
+          width: 75px;
+          text-align: center;
+        }
+        &:hover {
+          color: #fb4226 !important;
+          cursor: pointer;
+        }
+      }
+      &::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    }
+
+    ul.detail-movie__dsSuatChieu {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      overflow: hidden;
+      overflow-y: scroll;
+      align-items: center;
+      text-align: center;
+      li.card-suat-chieu {
+        width: 90%;
+        padding: 20px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $color-gray;
+
+        .suat-chieu {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          width: 100%;
+          padding: 0;
+          .hinh-anh-rap {
+            flex: 3;
+            img {
+              width: 70px;
+            }
+          }
+
+          .suat-chieu__thong-tin-rap {
+            padding-left: 10px;
+            text-align: start;
+            flex: 9;
+            display: flex;
+            flex-direction: column;
+            justify-self: start;
+            align-items: start;
+            font-weight: 700;
+            span.BHDStar {
+              color: #8bc541;
+            }
+            span.CGV {
+              color: #e71a0f;
+            }
+            span.CineStar {
+              color: #df0d7a;
+            }
+            span.Galaxy {
+              color: #f60;
+            }
+            span.LotteCinima {
+              color: #ca4137;
+            }
+            span.MegaGS {
+              color: #e5a813;
+            }
+          }
+        }
+
+        .thoi-gian-chieu__container {
+          overflow: hidden;
+          ul.thoi-gian-chieu__ds {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li.thoi-gian-chieu__item {
+              width: 20%;
+              list-style: none;
+              padding: 10px;
+              margin: 5px;
+              border: 1px solid $color-gray;
+              transition: all 0.2s linear;
+              border-radius: 10px;
+
+              a {
+                text-decoration: none;
+                color: $color-dark-0;
+                font-size: 20px;
+                font-weight: 700;
+              }
+
+              &:hover {
+                color: #fb4226 !important;
+                cursor: pointer;
+                border: 1px solid #fb4226;
+                box-shadow: 2px 2px 10px 2px;
+              }
+            }
+          }
+        }
+      }
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      a.back-home-link{
+        text-decoration: none;
+        
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .detail-movie__showLichChieu {
+    .detail-movie__showHeThong {
+      ul.detail-movie__dsHeThong {
+        li {
+          justify-content: center;
+          img {
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  li.card-suat-chieu {
+    .thoi-gian-chieu__container {
+      ul.thoi-gian-chieu__ds {
+        li.thoi-gian-chieu__item {
+          width: 50% !important;
+        }
+      }
+    }
+  }
+}
