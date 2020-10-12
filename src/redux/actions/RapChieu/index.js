@@ -1,7 +1,7 @@
 import * as actTypes from "../../constants/RapChieu";
 import Axios from "axios";
 
-const URL_QUAN_LY_RAP_API = "http://movie0706.cybersoft.edu.vn/api/QuanLyRap";
+const URL_QUAN_LY_RAP_API = "https://movie0706.cybersoft.edu.vn/api/QuanLyRap";
 
 
 let heThongTmp = {};
